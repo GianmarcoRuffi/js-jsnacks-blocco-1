@@ -2,12 +2,19 @@
 Chiedi un numero di 4 cifre all’utente
 e calcola la somma di tutte le cifre che compongono il numero.*/
 
-// let num = parseInt(prompt("Please enter a 4-digits number."));
+let num = prompt("Please enter a 4-digits number.");
 
-let maxLength = 4;
-let userData = -1;
+const maxLength = 4;
 
-while (userData == -1 || (userData != null && userData.length > maxLength)) {
-  userData = window.prompt(`Please enter a ${maxLength}-digits number.`);
-  console.log(userData);
+if (num.length != 4) {
+  console.log("ERRORE");
+} else {
+  let numbers = num.split("");
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += parseInt(numbers[i]);
+  }
+
+  console.log(sum);
 }
