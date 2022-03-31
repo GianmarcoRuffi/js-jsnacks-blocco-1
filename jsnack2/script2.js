@@ -9,13 +9,13 @@ let questionCount = 0;
 
 do {
   let enteredNumber = parseInt(prompt("Please enter a number "));
-  if (enteredNumber % 2 == 0) {
+
+  if (isNaN(enteredNumber)) {
+    console.log("Not a number");
+  } else if (enteredNumber % 2 == 0) {
     console.log("The number is Even. It won't be added.");
     questionCount += 1;
-  }
-
-  // if the number is odd
-  else {
+  } else {
     numList.push(enteredNumber);
     questionCount += 1;
     console.log("The number is Odd. Added to the array.");
