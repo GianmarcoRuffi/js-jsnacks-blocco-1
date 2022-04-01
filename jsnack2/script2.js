@@ -7,6 +7,8 @@ let numList = [];
 
 let questionCount = 0;
 
+let output = document.getElementById("output");
+
 do {
   let enteredNumber = parseInt(prompt("Please enter a number "));
 
